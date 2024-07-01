@@ -6,6 +6,7 @@ from masud.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home, name='home'),
-    path('detail/<int:id>/',detail,name='detail')
+    path('detail/<int:id>/',detail,name='detail'),
+    path('contact/',contact,name = 'contact')
 
 ]

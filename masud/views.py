@@ -4,9 +4,11 @@ from .models import Oakil
 # Create your views here.
 def home(request):
     contact = Oakil.objects.all()
+    my_list = ['apple','orange']
 
     context = {
-        'contact':contact
+        'contact':contact,
+        'mylist' : my_list
     }
 
 
@@ -24,4 +26,8 @@ def detail(request, id):
 
 
     return render(request, 'masud/detail.html', context)
+
+
+def contact(request):
+    return render(request,'masud/contact.html')
 
