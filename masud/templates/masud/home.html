@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+        </style>
+</head>
+<body>
+   <h1>hello world</h1> 
+
+   <table>
+    <tr>
+        <th>name</th>
+        <th>age</th>
+        <th>phone</th>
+        <th>adderss</th>
+    </tr>
+    {% for contact in contact %}
+    <tr>
+        
+        <td> <a href=" {% url 'detail'  contact.id %}"> {{contact.name}}</td> </a>
+        <td>{{contact.age}}</td>
+        <td>{{contact.phone}}</td>
+        <td>{{contact.address}}</td>
+    </tr>
+    {% endfor %}
+   </table>
+</body>
+</html>
